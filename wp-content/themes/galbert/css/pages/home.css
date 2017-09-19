@@ -310,3 +310,8 @@ article {
 	visibility: visible;
 	opacity: 1;
 }
+
+body.home .hr-logo a {
+	cursor: default;
+	pointer-events: none;
+}

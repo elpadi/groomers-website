@@ -15,23 +15,9 @@
 	<footer>
 		
 
-		<?php if(is_page('home')) { ?>
-
-			<div class="hr-logo">
-			
-				<div></div>
-			
-			</div>
-
-		<?php } else { ?>
-
-			<div class="hr-logo">
-		
-				<a href="/" class="logo"></a>
-
-			</div>
-
-		<?php } ?>
+		<div class="hr-logo">
+			<a href="<?php echo esc_url(home_url('/')); ?>" class="logo"></a>
+		</div>
 
 		<ul class="info">
 			<li class="col-1">Questions? Call us at
