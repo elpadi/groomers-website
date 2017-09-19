@@ -616,7 +616,8 @@ function page_specific_js() {
 
 	} */
 
-	wp_register_script( 'scripts_js', get_template_directory_uri().'/js/scripts.min.js', array( 'jquery' ), '', true );
+	wp_register_script( 'vimeo', 'https://player.vimeo.com/api/player.js' );
+	wp_register_script( 'scripts_js', sprintf('%s/js/scripts.%s', get_template_directory_uri(), WP_DEBUG ? 'js' : 'min.js'), array( 'vimeo','jquery' ), '', true );
 	wp_enqueue_script( 'scripts_js' );
 
 }

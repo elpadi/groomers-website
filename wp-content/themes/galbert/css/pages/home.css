@@ -244,3 +244,69 @@ article {
 		position:absolute;
 	}
 }
+
+.video-embed {
+	margin-bottom: 60px;
+	text-align: center;
+	cursor: pointer;
+}
+.video-embed .video-container {
+	display: inline-block;
+	position: relative;
+}
+.video-embed img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: auto;
+	z-index: 2;
+}
+.video-embed iframe {
+	max-width: 100%;
+	opacity: 0;
+	transition: opacity 0.5s;
+}
+@media (max-width: 694px) {
+	.video-embed iframe {
+		height: calc((100vw - 54px) * 0.5625);
+	}
+}
+.video-embed .play-icon {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	margin: auto;
+	z-index: 3;
+	width: 80px;
+	height: 80px;
+	opacity: 0.5;
+	transition: opacity 0.2s;
+	pointer-events: none;
+}
+.video-embed:hover .play-icon {
+	opacity: 1;
+}
+.video-embed .play-icon .circle,
+.video-embed .play-icon .triangle {
+	stroke: white;
+	fill: white;
+}
+.video-embed .play-icon .circle {
+	fill: none;
+	stroke-width: 12px;
+}
+.video-embed .play-icon .triangle {
+	transform-origin: center;
+	transform: scale(0.7) translateX(5px);
+}
+.video-embed.show-embed .play-icon,
+.video-embed.show-embed img {
+	opacity: 0;
+}
+.video-embed.show-embed iframe {
+	visibility: visible;
+	opacity: 1;
+}
