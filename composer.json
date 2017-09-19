@@ -1,0 +1,17 @@
+{
+    "name": "elpadi/groomers",
+    "description": "Wordpress website for G. Albert Groomers.",
+    "type": "project",
+    "require": {
+        "johnpbloch/wordpress-core-installer": "^1.0",
+        "johnpbloch/wordpress-core": "^4.8"
+    },
+    "license": "GPL-3.0",
+    "authors": [
+        {
+            "name": "carlos (minimal)",
+            "email": "padi_05@yahoo.com"
+        }
+    ],
+    "minimum-stability": "stable"
+}
