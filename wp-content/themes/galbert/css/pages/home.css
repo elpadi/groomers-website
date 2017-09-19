@@ -7,10 +7,9 @@
   padding: 15px 0;
   text-decoration: none;
   display: block;
-  width: 245px;
-  margin: 0px 60px 60px 300px;
+  max-width: 245px;
+  margin: 0 auto 60px;
   text-align: center;
-
 }
 
 .membership-btn a {
@@ -231,21 +230,17 @@ article {
 @media (max-width: 850px) {
   /* line 52, home.scss */
 
-  .video {
-    overflow:hidden;
-    padding-bottom:56.25%;
-    position:relative;
-    height:0;
-}
-  .video iframe{
-    left:0;
-    top:0;
-    height:100%;
-    width:100%;
-    position:absolute;
-}
-.membership-btn {
-  margin: 0px 30px 35px 20px;
-  text-align: center;
-
+	.video {
+		overflow:hidden;
+		padding-bottom:56.25%;
+		position:relative;
+		height:0;
+	}
+	.video iframe{
+		left:0;
+		top:0;
+		height:100%;
+		width:100%;
+		position:absolute;
+	}
 }
