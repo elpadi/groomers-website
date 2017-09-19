@@ -263,3 +263,17 @@ article .memberships h1 {
     display: none;
   }
 }
+
+.page-template-tmp-menus .feat-img {
+	padding: 7px;
+	border: 1px solid #777;
+	margin: 60px 0;
+	clear: both;
+}
+@media (min-width: 501px) {
+	.page-template-tmp-menus .feat-img {
+		float: right;
+		width: 45%;
+		clear: none;
+	}
+}

@@ -71,7 +71,7 @@ get_header(); ?>
 			endwhile;				
 			endif;
 			/* Reset the Query */
-			wp_reset_query();
+			wp_reset_query(); printf('<div class="feat-img"><img src="%s" alt=""></div>', get_field('menu_image'));
 			?>
 
 		</article>
