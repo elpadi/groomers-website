@@ -1,0 +1,23 @@
+@import "app/layout/header";
+@import "app/layout/footer";
+
+// ---------- Base styling for Template Layout
+
+section {
+
+	width: 100%;
+
+}
+
+article {
+
+	max-width: 845px;
+	margin: 0 auto;
+
+	@include breakpoint(medium) {
+
+		width: 90%;
+
+	}
+
+}

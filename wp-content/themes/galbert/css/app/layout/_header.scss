@@ -1,0 +1,153 @@
+header {
+
+	width: 100%;
+	height: 168px;
+	background: url(../images/logo-transparent.png) $gray-03 no-repeat right center;
+	z-index: 10;
+	padding: 30px 0 0 0;
+	overflow: visible;
+
+	-webkit-box-shadow:  0px 0px 16px 0px rgba(35, 31, 32, 1);
+    box-shadow:  0px 0px 16px 0px rgba(35, 31, 32, 1);
+
+    > a {
+
+		@extend %image-replace;
+		@extend %sprite-logo;
+
+		display: block;
+		margin: 0 auto;
+
+	}
+
+	@include breakpoint(small) {
+
+		background: $gray-03;
+
+	}
+
+}
+
+.menu-main-menu-container {
+
+	max-width: 845px;
+	margin: 0 auto;
+
+	ul {
+
+		list-style: none;
+		display: block;
+		max-width: 830px;
+		margin: 0 auto;
+		text-align: center
+		padding: 36px 0 0 0;
+
+		@include breakpoint(medium) {
+
+			max-width: 690px;
+
+		}
+
+		@include breakpoint(small) {
+
+			padding: 0 0 0 0;
+
+		}
+
+	}
+
+	li {
+
+		@extend %inline-block;
+		margin: 0 15px;
+		font-family: $cabin;
+		font-size: 13px;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+
+		&.current-menu-item a {
+
+				color: $orange-01;
+		}
+
+		a {
+			
+			color: $white-01;
+			text-decoration: none;
+
+			&:hover {
+
+				color: $orange-01;
+
+			}
+
+		}
+
+		@include breakpoint(medium) {
+
+			margin: 0 12px;
+			letter-spacing: 0;
+
+		}
+
+		@include breakpoint(small) {
+
+			display: block;
+			width: 95%;
+			padding: 15px 0;
+			border-bottom: 1px solid $gray-06;
+
+			&:first-child {
+
+				border-bottom: none;
+				padding: 0 0;
+
+			}
+
+		}
+
+	}
+
+	.open {
+
+		display: none;
+
+		@include breakpoint(small) {
+
+			display: block;
+
+		}
+
+		a {
+
+			@extend %image-replace;
+
+			position: absolute;
+			width: 29px;
+			height: 22px;
+			left: 100%;
+			top: 20px;
+			margin: 0 0 0 15px;
+			background: url(../images/icon-menu.png);
+
+		}
+
+	}
+
+	@include breakpoint(medium) {
+
+		width: 100%;
+
+	}
+
+	@include breakpoint(small) {
+
+		background: $gray-03;
+		position: absolute;
+		width: 85%;
+		top: 0;
+		right: 100%;
+
+	}
+
+}

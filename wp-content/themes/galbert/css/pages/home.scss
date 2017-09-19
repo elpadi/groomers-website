@@ -1,0 +1,182 @@
+@import "app/base/core";
+
+article {
+
+	font-family: $georgia;
+
+}
+
+.slideshow {
+
+	@extend %slideshow;
+
+}
+
+.intro {
+
+	font-size: 16px;
+	line-height: 29px;
+	text-align: center;
+	padding: 25px 0 40px;
+
+	strong {
+
+		text-transform: uppercase;
+		font-size: 18px;
+		letter-spacing: 4px;
+
+	}
+
+}
+
+.hr-logo {
+
+	@extend %hr-logo;
+
+}
+
+.promos {
+
+	width: 100%;
+	padding: 40px 0 30px;
+	font-size: 14px;
+	line-height: 20px;
+
+	> ul {
+
+		list-style: none;
+		margin: 0;
+		width: 100%;
+		text-align: center;
+
+		> li {
+
+			@extend %inline-block;
+			width: 33%;
+
+			@include breakpoint(medium) {
+
+				display: block;
+				width: 279px;
+				margin: 0 auto 75px;
+
+			}
+
+		}
+
+	}
+
+	.products,
+	.services,
+	.memberships {
+
+		h2,
+		> a,
+		.hr {
+
+			@extend %image-replace;
+			display: block;
+			margin: 0 auto;
+
+		}
+
+		h2 {
+
+			margin-bottom: 24px;
+
+		}
+
+	}
+
+	.products {
+
+		h2 {
+
+			@extend %sprite-h2-products;
+
+			margin-bottom: 19px;
+
+		}
+
+		img {
+
+			display: block;
+			margin: 0 auto 13px;
+
+		}
+
+		> a {
+
+			@extend %sprite-shop-collection;
+
+		}
+
+	}
+
+	.services {
+
+		h2 {
+
+			@extend %sprite-h2-services;
+			margin: 5px auto 21px;
+
+		}
+
+		> a {
+
+			@extend %sprite-make-reservations;
+
+		}
+
+		ul {
+
+			list-style: none;
+			margin: 0 0 35px;
+			text-align: center;
+
+			a {
+
+				color: $orange-01;
+				font-style: italic;
+				text-decoration: none;
+
+			}
+
+		}
+
+	}
+
+	.memberships {
+
+		h2 {
+
+			@extend %sprite-h2-deals;
+			margin-bottom: 12px;
+
+			&:first-child {
+
+				@extend %sprite-h2-memberships;
+				margin-bottom: 15px;
+
+			}
+
+		}
+
+		.hr {
+
+			@extend %sprite-hr-memberships;
+			margin: 31px auto 31px;
+
+		}
+
+		a {
+
+			color: $orange-01;
+			font-style: italic;
+			text-decoration: none;
+
+		}
+
+	}
+
+}

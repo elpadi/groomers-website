@@ -1,0 +1,43 @@
+@import "app/base/core";
+
+ul.gallery {
+
+	margin: 45px 0;
+	list-style: none;
+	width: 100%;
+
+	li {
+
+		@extend %inline-block;
+
+		width: 30.17751479%; //255px
+		padding: 0.8284023669%; //7px
+		margin: 0.5917159763%; //5px
+		border: 1px solid $gray-07;
+
+		@include breakpoint(small) {
+
+			display: block;
+			width: auto;
+			padding: 7px;
+			margin: 5px;
+
+		}
+
+		img {
+
+			width: 100%;
+			height: auto;
+			cursor: pointer;
+
+		}
+
+	}
+
+}
+
+.overlay{
+
+	@extend %overlay;
+
+}

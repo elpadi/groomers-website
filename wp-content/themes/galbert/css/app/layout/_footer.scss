@@ -1,0 +1,225 @@
+footer {
+
+	width: 100%;
+	font-family: $georgia;
+
+	.hr,
+	.info,
+	.hr-logo {
+
+		max-width: 845px;
+		margin: 0 auto;
+
+		@include breakpoint(medium) {
+
+			width: 90%;
+
+		}
+
+	}
+
+	.hr {
+
+		@extend %hr-01;
+
+	}
+
+	.hr-logo {
+
+		@extend %hr-logo;
+
+	}
+
+	.info {
+
+		list-style: none;
+		padding: 30px 0 15px;
+		text-align: center;
+		font-size: 14px;
+		background: url('../images/bg-divider.png') no-repeat center 30px;
+
+		li {
+
+			@extend %inline-block;
+			width: 33%;
+
+			@include breakpoint(small) {
+
+				display: block;
+				width: 279px;
+				margin: 0 auto 35px;
+
+			}
+
+			span {
+
+				font-size: 18px;
+				letter-spacing: 4px;
+				display: block;
+				margin-top: 4px;
+
+			}
+
+			&.col-1 span a {
+
+				color: $orange-01;
+				text-decoration: none;
+			}
+
+			&.col-2 {
+
+				span a {
+
+					@extend %image-replace;
+					@extend %sprite-get-directions;
+
+					margin: 10px auto 0;
+
+				}
+
+			}
+
+			&.col-3 {
+
+				span {
+
+					@extend %image-replace;
+					@extend %sprite-keep-in-touch;
+
+					margin: 0 auto 10px;
+
+				}
+
+				input[type=email] {
+
+					@extend %inline-block;
+					border: 1px solid $gray-08;
+					padding: 7px;
+					width: 40%;
+				}
+
+				input[type=submit] {
+					
+					@extend %inline-block;
+					background-color: $gray-09;
+					color: $white-01;
+					text-transform: uppercase;
+					border: none;
+					font-size: 11px;
+					cursor: pointer;
+					padding: 7px;
+					-webkit-appearance: none;
+					border-radius: 0;
+				}
+
+			}
+
+		}
+
+		@include breakpoint(medium) {
+
+			background: none;
+
+		}
+
+	}
+
+	.social {
+
+		width: 120px;
+		margin: 0 auto 20px;
+
+		@include breakpoint(small) {
+
+			width: 208px;
+
+		}
+
+		li {
+
+			@extend %inline-block;
+			margin: 0 3px;
+
+			@include breakpoint(small) {
+
+				margin: 0 7px;
+
+			}
+
+			a {
+
+				display: block;
+
+			}
+
+		}
+
+		.fb a {
+
+			@extend %sprite-social-fb;
+
+			@include breakpoint(small) {
+
+				@include sprite(35px, 34px, 0, -389px, 0, -389px);
+
+			}
+
+		}
+
+		.tw a {
+
+			@extend %sprite-social-tw;
+
+			@include breakpoint(small) {
+
+				@include sprite(35px, 34px, -49px, -389px, -48px, -389px);
+
+			}
+
+		}
+
+		.yp a {
+
+			@extend %sprite-social-yp;
+
+			@include breakpoint(small) {
+
+				@include sprite(35px, 34px, -97px, -389px, -96px, -389px);
+
+			}
+
+		}
+
+		.em a {
+
+			@extend %sprite-social-em;
+
+			@include breakpoint(small) {
+
+				@include sprite(35px, 34px, -146px, -389px, -145px, -389px);
+
+			}
+
+		}
+
+	}
+
+	.copy {
+
+		display: block;
+		text-align: center;
+		font-size: 11px;
+		color: $white-01;
+		padding: 10px 0;
+		background: $gray-05;
+
+		a {
+
+			color: $white-01;
+			text-decoration: none;
+
+		}
+
+	}
+
+}

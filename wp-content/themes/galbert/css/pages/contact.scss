@@ -1,0 +1,38 @@
+@import "app/base/core";
+
+article {
+
+	@extend %clear-fix;
+	@extend %content-block;
+
+	.content {
+		padding: 70px 0 0;
+		width: 35%;
+		float: left;
+
+		@include breakpoint(medium) {
+			width: 45%
+		}
+
+		@include breakpoint(smaller) {
+			padding: 20px 0 60px;
+			width: 100%;
+		}
+	}
+
+	.feat-img {
+		padding: 80px 0 45px 0;
+		float: right;
+
+		@include breakpoint(medium) {
+			width: 55%;
+		}
+
+		@include breakpoint(smaller) {
+			padding: 20px 0 0 0;
+			width: 100%;
+		}
+
+	}
+
+}

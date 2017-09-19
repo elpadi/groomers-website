@@ -1,0 +1,26 @@
+@import "app/base/core";
+
+article {
+
+	@extend %clear-fix;
+	@extend %content-block;
+
+	.content {
+		padding: 70px 0 40px 0;
+		/* Uncomment if Featured Image is added
+		width: 48%;
+		float: left; */
+
+		@include breakpoint(smaller) {
+			width: 100%;
+			padding: 30px 0 40px 0;
+		}
+
+	}
+
+	.feat-img {
+		padding: 60px 0 0;
+		float: right;
+	}
+
+}

@@ -1,0 +1,251 @@
+
+
+.membership-btn {
+  color: white;
+  background-color: #c96430;
+  font-family: "DINWEB", sans-serif;
+  padding: 15px 0;
+  text-decoration: none;
+  display: block;
+  width: 245px;
+  margin: 0px 60px 60px 300px;
+  text-align: center;
+
+}
+
+.membership-btn a {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.video {
+    width: 1020px;
+    margin: 0 auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* line 21, ../app/widgets/_sprites.scss */
+.hr-logo a {
+  width: 40px;
+  height: 40px;
+  background: url(/wp-content/themes/galbert/images/sprites.png) 0 -135px no-repeat;
+}
+/* line 7, ../app/widgets/_sprites.scss */
+.hr-logo a:hover {
+  background-position: 0 -135px;
+}
+
+
+/* line 3, ../app/widgets/_hr.scss */
+.hr-logo {
+  border-top: 1px solid #625d59;
+  border-bottom: 1px solid #dbdad9;
+  position: relative;
+  overflow: visible;
+  height: 0;
+}
+/* line 11, ../app/widgets/_hr.scss */
+.hr-logo a {
+  margin: 0 auto;
+  display: block;
+  position: relative;
+  top: -20px;
+}
+
+@-webkit-keyframes fadeIn {
+  /* line 4, ../app/widgets/_animations.scss */
+  0% {
+    opacity: 0;
+  }
+
+  /* line 5, ../app/widgets/_animations.scss */
+  100% {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes fadeIn {
+  /* line 9, ../app/widgets/_animations.scss */
+  0% {
+    opacity: 0;
+  }
+
+  /* line 10, ../app/widgets/_animations.scss */
+  100% {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes fadeIn {
+  /* line 14, ../app/widgets/_animations.scss */
+  0% {
+    opacity: 0;
+  }
+
+  /* line 15, ../app/widgets/_animations.scss */
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  /* line 19, ../app/widgets/_animations.scss */
+  0% {
+    opacity: 0;
+  }
+
+  /* line 20, ../app/widgets/_animations.scss */
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeOut {
+  /* line 28, ../app/widgets/_animations.scss */
+  0% {
+    opacity: 1;
+  }
+
+  /* line 29, ../app/widgets/_animations.scss */
+  100% {
+    opacity: 0;
+  }
+}
+
+@-moz-keyframes fadeOut {
+  /* line 33, ../app/widgets/_animations.scss */
+  0% {
+    opacity: 1;
+  }
+
+  /* line 34, ../app/widgets/_animations.scss */
+  100% {
+    opacity: 0;
+  }
+}
+
+@-o-keyframes fadeOut {
+  /* line 38, ../app/widgets/_animations.scss */
+  0% {
+    opacity: 1;
+  }
+
+  /* line 39, ../app/widgets/_animations.scss */
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeOut {
+  /* line 43, ../app/widgets/_animations.scss */
+  0% {
+    opacity: 1;
+  }
+
+  /* line 44, ../app/widgets/_animations.scss */
+  100% {
+    opacity: 0;
+  }
+}
+
+/* line 52, ../app/widgets/_animations.scss */
+.animate {
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  -ms-animation-fill-mode: both;
+  -o-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-duration: 1.5s;
+  -moz-animation-duration: 1.5s;
+  -ms-animation-duration: 1.5s;
+  -o-animation-duration: 1.5s;
+  animation-duration: 1.5s;
+}
+
+/* line 67, ../app/widgets/_animations.scss */
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  -moz-animation-name: fadeIn;
+  -o-animation-name: fadeIn;
+  animation-name: fadeIn;
+}
+
+/* line 75, ../app/widgets/_animations.scss */
+.fadeOut {
+  -webkit-animation-name: fadeOut;
+  -moz-animation-name: fadeOut;
+  -o-animation-name: fadeOut;
+  animation-name: fadeOut;
+}
+
+/* line 1, ../app/widgets/_slideshow.scss */
+.slideshow {
+  max-width: 1020px;
+  max-height: 405px;
+  margin: 0 auto;
+  list-style: none;
+  position: relative;
+}
+/* line 9, ../app/widgets/_slideshow.scss */
+.slideshow li {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: block;
+  opacity: 0;
+}
+/* line 18, ../app/widgets/_slideshow.scss */
+.slideshow li.fadeIn {
+  position: relative;
+}
+/* line 26, ../app/widgets/_slideshow.scss */
+.slideshow img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* line 3, home.scss */
+article {
+  font-family: Georgia, Times, "Times New Roman", serif;
+}
+
+/* line 15, home.scss */
+.intro {
+  font-size: 16px;
+  line-height: 29px;
+  text-align: center;
+  padding: 25px 0 40px;
+}
+/* line 22, home.scss */
+.intro strong {
+  text-transform: uppercase;
+  font-size: 16px;
+  letter-spacing: 4px;
+}
+
+
+
+@media (max-width: 850px) {
+  /* line 52, home.scss */
+
+  .video {
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+}
+  .video iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+}
+.membership-btn {
+  margin: 0px 30px 35px 20px;
+  text-align: center;
+
+}

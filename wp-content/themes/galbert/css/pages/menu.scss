@@ -1,0 +1,80 @@
+@import "app/base/core";
+
+article {
+
+	h3 { font-weight: bold; }
+
+	@extend %clear-fix;
+	@extend %content-block;
+
+	.left, .right {
+		width: 45%;
+		padding: 70px 0 0;
+
+		@include breakpoint(smaller) {
+			width: 100%;
+			padding: 30px 0 0;
+		}
+	}
+
+	.left {
+		padding-bottom: 50px;
+		float: left;
+
+		@include breakpoint(smaller) {
+			padding-bottom: 0;
+		}
+	}
+
+	.right {
+		float: right;
+	}
+
+	.packages {
+		padding: 0 0 20px 0;
+
+		@include breakpoint(smaller) {
+			padding: 0;
+		}
+	}
+
+	.memberships {
+
+		border: solid 1px $gray-04;
+		padding: 25px 0 18px 0;
+
+		@include breakpoint(smaller) {
+			border: none;
+		}
+
+		h1, .hr, h3, p {
+			width: 87%;
+			margin: 0 auto;
+
+			@include breakpoint(smaller) {
+				width: 100%;
+			}
+		}
+
+		h1 {
+			text-align: center;
+			padding: 0 0 13px 0;
+
+			@include breakpoint(smaller) {
+				text-align: left;
+				padding: 0;
+			}
+		}
+
+		.hr {
+
+			@extend %hr-01;
+
+			@include breakpoint(smaller) {
+				display: none;
+			}
+		}
+	}
+
+
+}

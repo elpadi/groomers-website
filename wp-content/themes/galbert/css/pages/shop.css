@@ -1,0 +1,267 @@
+/* line 4, ../app/widgets/_clear-fix.scss */
+article:before, article .hr div:before, article:after, article .hr div:after {
+  content: " ";
+  display: table;
+}
+/* line 9, ../app/widgets/_clear-fix.scss */
+article:after, article .hr div:after {
+  clear: both;
+}
+
+/* line 23, ../app/widgets/_hr.scss */
+article .hr {
+  border-bottom: 1px solid #625d59;
+}
+/* line 27, ../app/widgets/_hr.scss */
+article .hr div {
+  border-top: 1px solid #3e3934;
+  border-bottom: 1px solid #c2c2c2;
+  height: 3px;
+}
+
+@-webkit-keyframes fadeIn {
+  /* line 4, ../app/widgets/_animations.scss */
+  0% {
+    opacity: 0;
+  }
+
+  /* line 5, ../app/widgets/_animations.scss */
+  100% {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes fadeIn {
+  /* line 9, ../app/widgets/_animations.scss */
+  0% {
+    opacity: 0;
+  }
+
+  /* line 10, ../app/widgets/_animations.scss */
+  100% {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes fadeIn {
+  /* line 14, ../app/widgets/_animations.scss */
+  0% {
+    opacity: 0;
+  }
+
+  /* line 15, ../app/widgets/_animations.scss */
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  /* line 19, ../app/widgets/_animations.scss */
+  0% {
+    opacity: 0;
+  }
+
+  /* line 20, ../app/widgets/_animations.scss */
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeOut {
+  /* line 28, ../app/widgets/_animations.scss */
+  0% {
+    opacity: 1;
+  }
+
+  /* line 29, ../app/widgets/_animations.scss */
+  100% {
+    opacity: 0;
+  }
+}
+
+@-moz-keyframes fadeOut {
+  /* line 33, ../app/widgets/_animations.scss */
+  0% {
+    opacity: 1;
+  }
+
+  /* line 34, ../app/widgets/_animations.scss */
+  100% {
+    opacity: 0;
+  }
+}
+
+@-o-keyframes fadeOut {
+  /* line 38, ../app/widgets/_animations.scss */
+  0% {
+    opacity: 1;
+  }
+
+  /* line 39, ../app/widgets/_animations.scss */
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeOut {
+  /* line 43, ../app/widgets/_animations.scss */
+  0% {
+    opacity: 1;
+  }
+
+  /* line 44, ../app/widgets/_animations.scss */
+  100% {
+    opacity: 0;
+  }
+}
+
+/* line 52, ../app/widgets/_animations.scss */
+.animate {
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  -ms-animation-fill-mode: both;
+  -o-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-duration: 1.5s;
+  -moz-animation-duration: 1.5s;
+  -ms-animation-duration: 1.5s;
+  -o-animation-duration: 1.5s;
+  animation-duration: 1.5s;
+}
+
+/* line 67, ../app/widgets/_animations.scss */
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  -moz-animation-name: fadeIn;
+  -o-animation-name: fadeIn;
+  animation-name: fadeIn;
+}
+
+/* line 75, ../app/widgets/_animations.scss */
+.fadeOut {
+  -webkit-animation-name: fadeOut;
+  -moz-animation-name: fadeOut;
+  -o-animation-name: fadeOut;
+  animation-name: fadeOut;
+}
+
+/* line 3, ../app/widgets/_content-block.scss */
+article {
+  max-width: 770px;
+  line-height: 19px;
+}
+/* line 8, ../app/widgets/_content-block.scss */
+article h1 {
+  font-size: 30px;
+  padding: 0 0 25px 0;
+}
+@media (max-width: 500px) {
+  /* line 8, ../app/widgets/_content-block.scss */
+  article h1 {
+    font-size: 24px;
+  }
+}
+/* line 21, ../app/widgets/_content-block.scss */
+article h3 {
+  font-size: 18px;
+  font-weight: normal;
+}
+/* line 28, ../app/widgets/_content-block.scss */
+article p {
+  font-size: 14px;
+  padding: 0 0 20px 0;
+}
+/* line 35, ../app/widgets/_content-block.scss */
+article a {
+  color: #c96430;
+  text-decoration: none;
+}
+/* line 42, ../app/widgets/_content-block.scss */
+article img {
+  width: 100%;
+  height: auto;
+}
+
+/* line 8, shop.scss */
+article .hr {
+  clear: both;
+}
+/* line 20, shop.scss */
+article .left {
+  float: left;
+  padding: 70px 0 0 0;
+  width: 37%;
+}
+@media (max-width: 850px) {
+  /* line 20, shop.scss */
+  article .left {
+    width: 45%;
+  }
+}
+@media (max-width: 500px) {
+  /* line 20, shop.scss */
+  article .left {
+    padding: 20px 0 30px;
+    width: 100%;
+  }
+}
+/* line 36, shop.scss */
+article .left a.gift-btn, article .left a.prod-btn {
+  color: white;
+  background-color: #c96430;
+  padding: 14px 0;
+  text-decoration: none;
+  display: block;
+  width: 60%;
+  margin: 20px 0 0 0;
+  text-align: center;
+  font-size: 15px;
+}
+@media (max-width: 500px) {
+  /* line 36, shop.scss */
+  article .left a.gift-btn, article .left a.prod-btn {
+    margin: 0 auto;
+    width: 70%;
+  }
+}
+/* line 54, shop.scss */
+article .right-top {
+  float: right;
+  padding: 70px 0 50px;
+  width: 60%;
+  clear: right;
+}
+@media (max-width: 850px) {
+  /* line 54, shop.scss */
+  article .right-top {
+    width: 50%;
+  }
+}
+@media (max-width: 500px) {
+  /* line 54, shop.scss */
+  article .right-top {
+    border: none;
+    padding: 20px 0 0;
+    width: 100%;
+  }
+}
+/* line 74, shop.scss */
+article .right-bottom {
+  float: right;
+  padding: 70px 0 65px 0;
+  width: 60%;
+}
+@media (max-width: 850px) {
+  /* line 74, shop.scss */
+  article .right-bottom {
+    width: 50%;
+  }
+}
+@media (max-width: 500px) {
+  /* line 74, shop.scss */
+  article .right-bottom {
+    border: none;
+    padding: 20px 0 0;
+    width: 100%;
+  }
+}

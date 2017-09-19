@@ -1,0 +1,42 @@
+/*
+Theme Name: G Albert Spa
+Theme URI: http://wordpress.org/themes/twentythirteen
+Author: Jackson Solutions Group
+Author URI: http://go-jsg.com
+Description: This is a custom WordPress Theme for G Albert Spa
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: awesome
+Text Domain: twentythirteen
+*/
+
+/* Import the Fonts */
+@import url('http://fonts.googleapis.com/css?family=Cabin');
+
+/* Import the app */
+@import url('css/global.css');
+
+/* Fonts -------------------- */
+
+@font-face {
+    font-family: "DINWeb";
+    src: url('fonts/DINWeb.eot');
+    src: url('fonts/DINWeb.eot?#iefix') format('embedded-opentype'),
+    	url('fonts/DINWeb.woff') format('woff'),
+    	url('fonts/DINWeb.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "DINWeb-Bold";
+    src: url('fonts/DINWeb-Bold.eot');
+    src: url('fonts/DINWeb-Bold.eot?#iefix') format('embedded-opentype'),
+    	url('fonts/DINWeb-Bold.woff') format('woff'),
+    	url('fonts/DINWeb-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* ---------- END Fonts ---------- */

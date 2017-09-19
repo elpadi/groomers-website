@@ -1,0 +1,93 @@
+@import "app/base/core";
+
+article {
+
+	@extend %clear-fix;
+	@extend %content-block;
+
+	.hr {
+
+		@extend %hr-01;
+		clear: both;
+		
+		div {
+
+			@extend %clear-fix;
+		}
+
+	}
+
+	.left {
+		float: left;
+		padding: 70px 0 0 0;	
+		width: 37%;
+
+		@include breakpoint(medium)  {
+			width: 45%;
+		}
+
+		@include breakpoint(smaller) {
+			padding: 20px 0 30px;
+			@extend %clear-fix;
+			width: 100%
+
+		}
+
+		a.gift-btn, a.prod-btn {
+			color: $white-01;
+			background-color: $orange-02;
+			padding: 14px 0;
+			text-decoration: none;
+			display: block;
+			width: 60%;
+			margin: 20px 0 0 0;
+			text-align: center;
+			font-size: 15px;
+
+			@include breakpoint(smaller) {
+				margin: 0 auto;
+				width: 70%;
+			}
+		}			
+	}
+
+	.right-top {
+		float: right;
+		padding: 70px 0 50px;
+		width: 60%;
+		clear: right;
+
+		@include breakpoint(medium) {
+			width: 50%;
+		}
+
+		@include breakpoint(smaller) {
+			border: none;
+			padding: 20px 0 0;
+			width: 100%;
+			@extend %clear-fix;
+			
+		}
+
+	}
+
+	.right-bottom {
+		float: right;
+		padding: 70px 0 65px 0;
+		width: 60%;
+
+		@include breakpoint(medium) {
+			width: 50%;
+		}
+		
+		@include breakpoint(smaller) {
+			border: none;
+			padding: 20px 0 0;
+			@extend %clear-fix;
+			width: 100%;
+			
+		}
+
+	}
+
+}

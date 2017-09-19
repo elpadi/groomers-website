@@ -1,0 +1,123 @@
+@mixin sprite($width, $height, $left: 0, $top: 0, $leftHover: 0, $topHover: 0) {
+	
+	width: $width;
+	height: $height;
+	background: url(/wp-content/themes/galbert/images/sprites.png) $left $top no-repeat;
+	
+	&:hover{
+	
+		background-position: $leftHover $topHover;
+	
+	}
+
+}
+
+// Top Logo
+%sprite-logo {
+	@include sprite(187px, 103px);
+}
+
+// HR with Logo
+%sprite-hr-logo {
+	@include sprite(40px, 40px, 0, -135px, 0, -135px);
+}
+
+// HR for Memberships
+%sprite-hr-memberships {
+	@include sprite(70px, 11px, 0, -292px, 0, -292px);
+}
+
+// Products Headline
+%sprite-h2-products {
+	@include sprite(202px, 25px, 0, -180px, 0, -180px);
+}
+
+// Services Headline
+%sprite-h2-services {
+	@include sprite(124px, 16px, 0, -210px, 0, -210px);
+}
+
+// Memberships Headline
+%sprite-h2-memberships {
+	@include sprite(194px, 24px, 0, -232px, 0, -232px);
+}
+
+// Deals Headline
+%sprite-h2-deals {
+	@include sprite(212px, 26px, 0, -261px, 0, -261px);
+}
+
+// Shop Collection Button
+%sprite-shop-collection {
+	@include sprite(185px, 36px, 0, -308px, 0, -308px);
+}
+
+// Make Reservations Button
+%sprite-make-reservations {
+	@include sprite(206px, 35px, 0, -349px, 0, -349px);
+}
+
+// Get Directions
+%sprite-get-directions {
+	@include sprite(206px, 11px, 0, -556px, 0, -556px);
+}
+
+// Keep In Touch
+%sprite-keep-in-touch {
+	@include sprite(192px, 12px, 0, -572px, 0, -572px);
+}
+
+// Facebook Icon
+%sprite-social-fb {
+	@include sprite(21px, 20px, 0, -110px, 0, -110px);
+}
+
+// Twitter Icon
+%sprite-social-tw {
+	@include sprite(21px, 20px, -28px, -110px, -28px, -110px);
+}
+
+// Yelp Icon
+%sprite-social-yp {
+	@include sprite(21px, 20px, -57px, -110px, -57px, -110px);
+}
+
+// Email Icon
+%sprite-social-em {
+	@include sprite(21px, 20px, -85px, -110px, -85px, -110px);
+}
+
+// Facebook Large Icon
+%sprite-social-fb-lg {
+	@include sprite(35px, 34px, 0, -389px, 0, -389px);
+}
+
+// Twitter Large Icon
+%sprite-social-tw-lg {
+	@include sprite(35px, 34px, -48px, -389px, -48px, -389px);
+}
+
+// Yelp Large Icon
+%sprite-social-yp-lg {
+	@include sprite(35px, 34px, -96px, -389px, -96px, -389px);
+}
+
+// Email Large Icon
+%sprite-social-em-lg {
+	@include sprite(35px, 34px, -145px, -389px, -145px, -389px);
+}
+
+// Overlay Close Button
+%sprite-overlay-close {
+	@include sprite(40px, 41px, 0, -429px, 0, -429px);
+}
+
+// Overlay Previous Button
+%sprite-overlay-prev {
+	@include sprite(40px, 76px, 0px, -474px, 0px, -474px);
+}
+
+// Overlay Next Button
+%sprite-overlay-next {
+	@include sprite(40px, 76px, -51px, -474px, -51px, -474px);
+}

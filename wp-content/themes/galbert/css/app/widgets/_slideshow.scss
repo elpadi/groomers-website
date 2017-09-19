@@ -1,0 +1,34 @@
+%slideshow {
+
+	max-width: 1020px;
+	max-height: 405px;
+	margin: 0 auto;
+	list-style: none;
+	position: relative;
+
+	li {
+
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		display: block;
+		opacity: 0;
+
+		&.fadeIn {
+
+			position: relative;
+
+		}
+
+	}
+
+	img {
+
+		display: block;
+		width: 100%;
+		height: auto;
+
+	}
+
+}

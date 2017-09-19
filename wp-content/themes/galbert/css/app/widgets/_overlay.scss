@@ -1,0 +1,76 @@
+%overlay {
+
+	display: none;
+
+	&.animate {
+		-webkit-animation-duration:.75s;
+		-moz-animation-duration:.75s;
+		-ms-animation-duration:.75s;
+		-o-animation-duration:.75s;
+		animation-duration:.75s;
+	}
+
+	&.fadeIn,
+	&.fadeOut {
+
+		display: block;
+		background: rgba(0, 0, 0, 0.9);
+		position: fixed;
+		z-index: 200;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0; 
+
+	}
+
+	img {
+
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		max-width: 60%;
+		max-height: 80%;
+
+	}
+
+	.next,
+	.prev {
+
+		display: block;
+		position: absolute;
+		top: 50%;
+		margin: -38px 0 0 0;
+
+	}
+
+	.next {
+
+		@extend %sprite-overlay-next;
+
+		right: 40px;
+
+	}
+
+	.prev {
+
+		@extend %sprite-overlay-prev;
+
+		left: 40px;
+
+	}
+
+	.close {
+
+		@extend %sprite-overlay-close;
+
+		position: absolute;
+		top: 25px;
+		right: 25px;
+		display: block;
+
+	}
+
+}

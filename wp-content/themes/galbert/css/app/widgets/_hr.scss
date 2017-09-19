@@ -1,0 +1,35 @@
+// ---------- Horizontal Rule
+
+%hr-logo {
+
+	border-top: 1px solid $gray-06;
+	border-bottom: 1px solid $white-02;
+	position: relative;
+	overflow: visible;
+	height: 0;
+
+	a {
+
+		@extend %sprite-hr-logo;
+		margin: 0 auto;
+		display: block;
+		position: relative;
+		top: -20px;
+
+	}
+
+}
+
+%hr-01 {
+
+	border-bottom: 1px solid $gray-06;
+
+	div {
+
+		border-top: 1px solid $gray-05;
+		border-bottom: 1px solid $gray-02;
+		height: 3px;
+
+	}
+
+}

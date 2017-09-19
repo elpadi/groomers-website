@@ -1,0 +1,71 @@
+// ---------- Reset
+
+html,body,h1,h2,h3,p,ul,ol,li,img,figure,form,
+fieldset,header,nav,section,article,aside,footer {
+
+	margin: 0;
+	padding: 0;
+
+}
+
+html, body {
+
+	width: 100%;
+	position: relative;
+
+}
+
+html {
+
+	-webkit-text-size-adjust: none;
+	background: $gray-03;
+
+	&.open {
+
+		height: 100%;
+		overflow: hidden;
+
+	}
+
+}
+
+body {
+
+	-webkit-transition: all .3s ease-out;
+	-moz-transition: all .3s ease-out;
+	-o-transition: all .3s ease-out;
+	transition: all .3s ease-out;
+
+	background: $white-01;
+	font-family: $cabin;
+	color: $gray-04;
+	left: 0%;
+
+	.open & {
+
+		position: absolute;
+		left: 85%;
+
+	}
+
+}
+
+article, aside, footer, header, nav, section{
+
+	display: block;
+	position: relative;
+
+}
+
+img {
+
+	border: none;
+	display: block;
+
+}
+
+a {
+
+	cursor: pointer;
+
+}

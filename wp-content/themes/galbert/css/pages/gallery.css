@@ -1,0 +1,255 @@
+/* line 3, ../app/widgets/_inline-block.scss */
+ul.gallery li {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  vertical-align: top;
+}
+
+/* line 111, ../app/widgets/_sprites.scss */
+.overlay .close {
+  width: 40px;
+  height: 41px;
+  background: url(/wp-content/themes/galbert/images/sprites.png) 0 -429px no-repeat;
+}
+/* line 7, ../app/widgets/_sprites.scss */
+.overlay .close:hover {
+  background-position: 0 -429px;
+}
+
+/* line 116, ../app/widgets/_sprites.scss */
+.overlay .prev {
+  width: 40px;
+  height: 76px;
+  background: url(/wp-content/themes/galbert/images/sprites.png) 0px -474px no-repeat;
+}
+/* line 7, ../app/widgets/_sprites.scss */
+.overlay .prev:hover {
+  background-position: 0px -474px;
+}
+
+/* line 121, ../app/widgets/_sprites.scss */
+.overlay .next {
+  width: 40px;
+  height: 76px;
+  background: url(/wp-content/themes/galbert/images/sprites.png) -51px -474px no-repeat;
+}
+/* line 7, ../app/widgets/_sprites.scss */
+.overlay .next:hover {
+  background-position: -51px -474px;
+}
+
+@-webkit-keyframes fadeIn {
+  /* line 4, ../app/widgets/_animations.scss */
+  0% {
+    opacity: 0;
+  }
+
+  /* line 5, ../app/widgets/_animations.scss */
+  100% {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes fadeIn {
+  /* line 9, ../app/widgets/_animations.scss */
+  0% {
+    opacity: 0;
+  }
+
+  /* line 10, ../app/widgets/_animations.scss */
+  100% {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes fadeIn {
+  /* line 14, ../app/widgets/_animations.scss */
+  0% {
+    opacity: 0;
+  }
+
+  /* line 15, ../app/widgets/_animations.scss */
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  /* line 19, ../app/widgets/_animations.scss */
+  0% {
+    opacity: 0;
+  }
+
+  /* line 20, ../app/widgets/_animations.scss */
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeOut {
+  /* line 28, ../app/widgets/_animations.scss */
+  0% {
+    opacity: 1;
+  }
+
+  /* line 29, ../app/widgets/_animations.scss */
+  100% {
+    opacity: 0;
+  }
+}
+
+@-moz-keyframes fadeOut {
+  /* line 33, ../app/widgets/_animations.scss */
+  0% {
+    opacity: 1;
+  }
+
+  /* line 34, ../app/widgets/_animations.scss */
+  100% {
+    opacity: 0;
+  }
+}
+
+@-o-keyframes fadeOut {
+  /* line 38, ../app/widgets/_animations.scss */
+  0% {
+    opacity: 1;
+  }
+
+  /* line 39, ../app/widgets/_animations.scss */
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeOut {
+  /* line 43, ../app/widgets/_animations.scss */
+  0% {
+    opacity: 1;
+  }
+
+  /* line 44, ../app/widgets/_animations.scss */
+  100% {
+    opacity: 0;
+  }
+}
+
+/* line 52, ../app/widgets/_animations.scss */
+.animate {
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  -ms-animation-fill-mode: both;
+  -o-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-duration: 1.5s;
+  -moz-animation-duration: 1.5s;
+  -ms-animation-duration: 1.5s;
+  -o-animation-duration: 1.5s;
+  animation-duration: 1.5s;
+}
+
+/* line 67, ../app/widgets/_animations.scss */
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  -moz-animation-name: fadeIn;
+  -o-animation-name: fadeIn;
+  animation-name: fadeIn;
+}
+
+/* line 75, ../app/widgets/_animations.scss */
+.fadeOut {
+  -webkit-animation-name: fadeOut;
+  -moz-animation-name: fadeOut;
+  -o-animation-name: fadeOut;
+  animation-name: fadeOut;
+}
+
+/* line 1, ../app/widgets/_overlay.scss */
+.overlay {
+  display: none;
+}
+/* line 5, ../app/widgets/_overlay.scss */
+.animate.overlay {
+  -webkit-animation-duration: .75s;
+  -moz-animation-duration: .75s;
+  -ms-animation-duration: .75s;
+  -o-animation-duration: .75s;
+  animation-duration: .75s;
+}
+/* line 14, ../app/widgets/_overlay.scss */
+.fadeIn.overlay, .fadeOut.overlay {
+  display: block;
+  background: rgba(0, 0, 0, 0.9);
+  position: fixed;
+  z-index: 200;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+/* line 29, ../app/widgets/_overlay.scss */
+.overlay img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  max-width: 60%;
+  max-height: 80%;
+}
+/* line 40, ../app/widgets/_overlay.scss */
+.overlay .next,
+.overlay .prev {
+  display: block;
+  position: absolute;
+  top: 50%;
+  margin: -38px 0 0 0;
+}
+/* line 49, ../app/widgets/_overlay.scss */
+.overlay .next {
+  right: 40px;
+}
+/* line 57, ../app/widgets/_overlay.scss */
+.overlay .prev {
+  left: 40px;
+}
+/* line 65, ../app/widgets/_overlay.scss */
+.overlay .close {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  display: block;
+}
+
+/* line 3, gallery.scss */
+ul.gallery {
+  margin: 45px 0;
+  list-style: none;
+  width: 100%;
+}
+/* line 9, gallery.scss */
+ul.gallery li {
+  width: 30.17751479%;
+  padding: 0.8284023669%;
+  margin: 0.5917159763%;
+  border: 1px solid #999999;
+}
+@media (max-width: 705px) {
+  /* line 9, gallery.scss */
+  ul.gallery li {
+    display: block;
+    width: auto;
+    padding: 7px;
+    margin: 5px;
+  }
+}
+/* line 27, gallery.scss */
+ul.gallery li img {
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+}
