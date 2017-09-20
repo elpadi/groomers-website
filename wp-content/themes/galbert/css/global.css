@@ -643,3 +643,6 @@ article {
     width: 90%;
   }
 }
+.uppercase {
+	text-transform: uppercase;
+}

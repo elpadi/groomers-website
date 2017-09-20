@@ -263,8 +263,11 @@ article {
 	z-index: 2;
 }
 .video-embed iframe {
+	position: relative;
 	max-width: 100%;
+	visibility: hidden;
 	opacity: 0;
+	z-index: 5;
 	transition: opacity 0.5s;
 }
 @media (max-width: 694px) {
@@ -300,7 +303,6 @@ article {
 }
 .video-embed .play-icon .triangle {
 	transform-origin: center;
-	transform: scale(0.7) translateX(5px);
 }
 .video-embed.show-embed .play-icon,
 .video-embed.show-embed img {
@@ -309,6 +311,10 @@ article {
 .video-embed.show-embed iframe {
 	visibility: visible;
 	opacity: 1;
+}
+.video-embed h3 {
+	margin-bottom: 1em;
+	letter-spacing: 0.2em;
 }
 
 body.home .hr-logo a {
