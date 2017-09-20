@@ -248,11 +248,11 @@ article {
 .video-embed {
 	margin-bottom: 60px;
 	text-align: center;
-	cursor: pointer;
 }
 .video-embed .video-container {
 	display: inline-block;
 	position: relative;
+	cursor: pointer;
 }
 .video-embed img {
 	position: absolute;
@@ -270,14 +270,14 @@ article {
 	z-index: 5;
 	transition: opacity 0.5s;
 }
-@media (max-width: 694px) {
+@media (max-width: 804px) {
 	.video-embed iframe {
 		height: calc((100vw - 54px) * 0.5625);
 	}
 }
 .video-embed .play-icon {
 	position: absolute;
-	top: 0;
+	top: 40px;
 	left: 0;
 	bottom: 0;
 	right: 0;
@@ -289,7 +289,7 @@ article {
 	transition: opacity 0.2s;
 	pointer-events: none;
 }
-.video-embed:hover .play-icon {
+.video-container:hover + .play-icon {
 	opacity: 1;
 }
 .video-embed .play-icon .circle,
@@ -313,8 +313,9 @@ article {
 	opacity: 1;
 }
 .video-embed h3 {
+	font-size: 1.3em;
 	margin-bottom: 1em;
-	letter-spacing: 0.2em;
+	letter-spacing: 4px;
 }
 
 body.home .hr-logo a {
