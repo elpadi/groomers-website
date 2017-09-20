@@ -276,4 +276,8 @@ article .memberships h1 {
 		width: 45%;
 		clear: none;
 	}
+	.page-template-tmp-menus .right .feat-img {
+		width: 100%;
+		float: none;
+	}
 }
