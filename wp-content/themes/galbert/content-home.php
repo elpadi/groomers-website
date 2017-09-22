@@ -15,10 +15,6 @@
 	<div class="intro">
 		<?php the_content(); ?>
 	</div>
-	
-	<div class="membership-btn">
-		<a href="http://108.162.58.54/onlinebooking/" target="_blank">MAKE RESERVATION</a>
-	</div>
 
 	<section id="home-video" class="video-embed">
 		<h3 class="uppercase"><?php the_field('home_video_title'); ?></h3>
