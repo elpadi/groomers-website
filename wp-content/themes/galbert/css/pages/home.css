@@ -275,9 +275,40 @@ article {
 		height: calc((100vw - 54px) * 0.5625);
 	}
 }
+.video-embed h3 {
+	font-size: 0.9em;
+	margin-bottom: 1em;
+	letter-spacing: 4px;
+}
+.video-embed h3 span {
+	display: block;
+	height: 0;
+	visibility: hidden;
+}
+@media (min-width: 420px) {
+	.video-embed h3 {
+		font-size: 1.3em;
+	}
+	.video-embed .play-icon {
+		top: 64px;
+	}
+}
+@media (min-width: 664px) {
+	.video-embed h3 {
+		font-size: 1.3em;
+	}
+	.video-embed .play-icon {
+		top: 40px;
+	}
+	.video-embed h3 span {
+		display: inline;
+		height: auto;
+		visibility: visible;
+	}
+}
 .video-embed .play-icon {
 	position: absolute;
-	top: 40px;
+	top: 50px;
 	left: 0;
 	bottom: 0;
 	right: 0;
@@ -285,7 +316,7 @@ article {
 	z-index: 3;
 	width: 80px;
 	height: 80px;
-	opacity: 0.5;
+	opacity: 1;
 	transition: opacity 0.2s;
 	pointer-events: none;
 }
@@ -299,7 +330,7 @@ article {
 }
 .video-embed .play-icon .circle {
 	fill: none;
-	stroke-width: 12px;
+	stroke-width: 5px;
 }
 .video-embed .play-icon .triangle {
 	transform-origin: center;
@@ -311,11 +342,6 @@ article {
 .video-embed.show-embed iframe {
 	visibility: visible;
 	opacity: 1;
-}
-.video-embed h3 {
-	font-size: 1.3em;
-	margin-bottom: 1em;
-	letter-spacing: 4px;
 }
 
 body.home .hr-logo a {
