@@ -1,4 +1,6 @@
+@import "app/base/variables";
 @import "app/widgets/clear-fix";
+@import "../app/widgets/prettydropdowns.css";
 .content {
 	> main {
 		max-width: 480px;
@@ -41,6 +43,38 @@
 	.btn {
 		padding-top: 9px;
 		padding-bottom: 9px;
+	}
+}
+.prettydropdown {
+	&, ul, li {
+		width: 100% !important;
+	}
+	> ul {
+		width: 100%;
+		font: inherit;
+		border-color: $white-02 !important;
+		outline-style: none !important;
+	}
+	&.arrow > ul:not(.active) > li.selected::before {
+		border-style: none;
+		background-color: $orange-02;
+		color: white;
+		width: 30px;
+		height: 30px;
+		top: 0;
+		right: -1px;
+		content: '\25B6';
+		line-height: 33px;
+		text-align: center;
+		transform: rotate(90deg);
+	}
+	> ul.active > li:not(.label):hover,
+	.prettydropdown > ul.active > li.hover:not(.label),
+	.prettydropdown > ul.active > li:first-child:hover:after {
+		background-color: $orange-02;
+	}
+	&.arrow .selected::after {
+		display: none !important;
 	}
 }
 

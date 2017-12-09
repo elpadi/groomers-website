@@ -549,7 +549,7 @@ function page_specific_css() {
         wp_enqueue_style( 'membership_css' );
     }
     /* Reservations CSS */ 
-    if ( is_page( 'reservations' ) ) {
+    if ( is_page( ['reservations','reservations-test'] ) ) {
         wp_register_style( 'reservations_css', get_template_directory_uri().'/css/pages/reservations.css' );
         wp_enqueue_style( 'reservations_css' );
     }
@@ -602,24 +602,19 @@ add_action( 'wp_enqueue_scripts', 'page_specific_css' );
  */
 function page_specific_js() {
 
-	/* Individual Project JS
-	if ( is_singular( 'projects' ) ) {
-		wp_register_script( 'prettyPhoto_js', get_template_directory_uri().'/js/jquery.prettyPhoto.js', '', '', true );
-	    wp_enqueue_script( 'prettyPhoto_js' );
-
-	} */
-
-	/* Certifications JS
-	if ( is_page( 'certifications' ) ) {
-		wp_register_script( 'prettyPhoto_js', get_template_directory_uri().'/js/jquery.prettyPhoto.js', '', '', true );
-	    wp_enqueue_script( 'prettyPhoto_js' );
-
-	} */
+	$js_dir = sprintf('%s/js', get_template_directory_uri());
 
 	wp_register_script( 'fetch', 'https://cdnjs.cloudflare.com/ajax/libs/fetch/2.0.3/fetch.min.js' );
 	wp_register_script( 'vimeo', 'https://player.vimeo.com/api/player.js' );
-	wp_register_script( 'scripts_js', sprintf('%s/js/scripts.%s', get_template_directory_uri(), WP_DEBUG ? 'js' : 'min.js'), array( 'fetch','vimeo','jquery' ), '', true );
-	wp_enqueue_script( 'scripts_js' );
+	wp_register_script( 'videos', "$js_dir/videos.js", array( 'fetch','vimeo' ), '1.0', true );
+	
+	wp_register_script( 'pretty-dropdowns', "$js_dir/jquery.prettydropdowns.js", array( 'jquery' ), '4.10.0', true );
+	
+	wp_register_script( 'main', "$js_dir/scripts.js", array( 'jquery' ), '1.0', true );
+	
+	if (is_front_page()) wp_enqueue_script( 'videos' );
+	if (is_page(['reservations','reservations-test'])) wp_enqueue_script( 'pretty-dropdowns' );
+	wp_enqueue_script( 'main' );
 
 }
 add_action( 'wp_enqueue_scripts', 'page_specific_js' );

@@ -66,49 +66,6 @@
 
 		},
 
-		replaceEmbedWithPoster: function(frame, onSuccess, onFail) {
-			var matches = /vimeo\.com\/video\/([0-9]+)/.exec(frame.src);
-			if (matches) {
-				var poster = new Image();
-				fetch('https://vimeo.com/api/v2/video/' + matches[1] + '.json')
-				.then(function(response, onFail) { return response.json(); })
-				.then(function(data, onFail) {
-					if (data.length && ('thumbnail_large' in data[0])) {
-						frame.parentNode.appendChild(poster);
-						poster.src = data[0].thumbnail_large;
-						onSuccess();
-					}
-					else {
-						onFail();
-					}
-				});
-			}
-			else onFail();
-		},
-
-		initVideos: function() {
-			var $frames = $('iframe'), i = 0;
-			var nextVideo = function() {
-				var $frame = $frames.eq(i);
-				if (i < $frames.length) {
-					GAlbert.replaceEmbedWithPoster($frames[i], function() {
-						var $embed = $frame.closest('.video-embed'),
-							player = new Vimeo.Player($frame[0]);
-						$embed.on('click', function() {
-							$embed.addClass('show-embed');
-							setTimeout(player.play.bind(player), 500);
-						});
-						nextVideo();
-					}, function() {
-						$frame.closest('.video-embed').addClass('show-embed');
-						nextVideo();
-					});
-				}
-				i++;
-			};
-			nextVideo();
-		},
-
 		// Initialize the slideshow
 		initSlideShow: function() {
 
@@ -354,7 +311,9 @@
 
 			}
 
-			this.initVideos();
+			if (window.Videos && ('init' in Videos)) Videos.init($);
+
+			if ('prettyDropdown' in $.fn) $('select').prettyDropdown({ height: 30 });
 
 		}
 

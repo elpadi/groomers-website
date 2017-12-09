@@ -9,9 +9,9 @@
  * @since Twenty Thirteen 1.0
  */
 
-if ( is_page( 'reservations' ) ) : ?>
+if ( is_page( ['reservations','reservations-test'] ) ) : ?>
 <aside class="sidebar" role="complementary">
-	<?php the_field('reservations_policy'); ?>
+	<?php the_field('reservations_policy', get_page_by_path('reservations')->ID); ?>
 </aside>
 <?php elseif ( is_active_sidebar( 'sidebar-2' ) ) : ?>
 	<div id="tertiary" class="sidebar-container" role="complementary">

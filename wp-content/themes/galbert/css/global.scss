@@ -22,7 +22,7 @@ body.page-template-tmp-sidebar > section > article {
 
 .btn {
   color: white;
-  background-color: #c96430;
+  background-color: $orange-02;
   padding: 15px 25px;
   text-decoration: none;
 	outline-style: none;
@@ -35,7 +35,6 @@ body.page-template-tmp-sidebar > section > article {
 
 input {
 	max-width: 100%;
-	border: 1px solid #f5f5f5;
 	box-shadow: none;
 	outline-style: none;
 	box-sizing: border-box;
@@ -44,6 +43,7 @@ textarea,
 input[type="text"],
 input[type="number"],
 input[type="email"] {
+	border: 1px solid $white-02;
 	line-height: 25px;
 	padding: 3px 5px;
 }

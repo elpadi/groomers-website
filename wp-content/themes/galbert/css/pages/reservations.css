@@ -1,3 +1,4 @@
+@import url(../app/widgets/prettydropdowns.css);
 .content form:before, .content form:after {
   content: " ";
   display: table; }
@@ -34,6 +35,36 @@
   .content .btn {
     padding-top: 9px;
     padding-bottom: 9px; }
+
+.prettydropdown, .prettydropdown ul, .prettydropdown li {
+  width: 100% !important; }
+
+.prettydropdown > ul {
+  width: 100%;
+  font: inherit;
+  border-color: #dbdad9 !important;
+  outline-style: none !important; }
+
+.prettydropdown.arrow > ul:not(.active) > li.selected::before {
+  border-style: none;
+  background-color: #c96430;
+  color: white;
+  width: 30px;
+  height: 30px;
+  top: 0;
+  right: -1px;
+  content: '\25B6';
+  line-height: 33px;
+  text-align: center;
+  transform: rotate(90deg); }
+
+.prettydropdown > ul.active > li:not(.label):hover,
+.prettydropdown .prettydropdown > ul.active > li.hover:not(.label),
+.prettydropdown .prettydropdown > ul.active > li:first-child:hover:after {
+  background-color: #c96430; }
+
+.prettydropdown.arrow .selected::after {
+  display: none !important; }
 
 /*
 article {
