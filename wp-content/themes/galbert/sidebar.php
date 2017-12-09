@@ -9,7 +9,11 @@
  * @since Twenty Thirteen 1.0
  */
 
-if ( is_active_sidebar( 'sidebar-2' ) ) : ?>
+if ( is_page( 'reservations' ) ) : ?>
+<aside class="sidebar" role="complementary">
+	<?php the_field('reservations_policy'); ?>
+</aside>
+<?php elseif ( is_active_sidebar( 'sidebar-2' ) ) : ?>
 	<div id="tertiary" class="sidebar-container" role="complementary">
 		<div class="sidebar-inner">
 			<div class="widget-area">

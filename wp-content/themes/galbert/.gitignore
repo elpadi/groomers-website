@@ -1,4 +1,7 @@
 .sass-cache
 
+css/compass
+css/_*.scss
+
 fonts/*
 !fonts/*.css

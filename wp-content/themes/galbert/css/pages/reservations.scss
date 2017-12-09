@@ -1,5 +1,50 @@
-@import "app/base/core";
+@import "app/widgets/clear-fix";
+.content {
+	> main {
+		max-width: 480px;
+	}
+	form {
+		@extend %clear-fix;
+	}
+	@media (min-width: 768px) {
+		> aside {
+			height: 710px;
+		}
+		form p {
+			width: 48%;
+		}
+		form p:nth-of-type(odd) {
+			float: left;
+		}
+		form p:nth-of-type(even) {
+			float: right;
+		}
+	}
+	/* textarea, submit, footer */
+	form p:nth-of-type(9),
+	form p:nth-of-type(10),
+	form p:nth-of-type(11) {
+		width: auto;
+		float: none;
+	}
+	input, select, textarea {
+		width: 100%;
+		margin-top: 5px;
+	}
+	form p:nth-of-type(9) {
+		padding-bottom: 10px;
+	}
+	input[type="submit"] {
+		width: auto;
+		text-transform: uppercase;
+	}
+	.btn {
+		padding-top: 9px;
+		padding-bottom: 9px;
+	}
+}
 
+/*
 article {
 
 	@extend %clear-fix;
@@ -96,3 +141,4 @@ article {
 	}
 
 }
+*/
