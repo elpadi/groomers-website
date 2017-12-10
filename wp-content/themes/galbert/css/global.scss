@@ -6,8 +6,13 @@ body.page > section > article {
 	@extend %content-block;
 }
 
+/* Wide pages */
+body.home > section > article,
 body.page-template-tmp-sidebar > section > article {
 	max-width: 840px;
+}
+
+body.page-template-tmp-sidebar > section > article {
 	.content > main {
 		@media (min-width: 540px) {
 			display: inline-block;

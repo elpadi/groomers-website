@@ -1,16 +1,17 @@
 var Videos = (function() {
+	var PLAYER_SHOW_DURATION = 500;
 	return {
 		init: function($) {
 			var $frames = $('iframe'), i = 0;
 			var nextVideo = function() {
 				var $frame = $frames.eq(i);
 				if (i < $frames.length) {
-					GAlbert.replaceEmbedWithPoster($frames[i], function() {
+					Videos.replaceEmbedWithPoster($frames[i], function() {
 						var $embed = $frame.closest('.video-embed'),
 							player = new Vimeo.Player($frame[0]);
 						$embed.on('click', function() {
 							$embed.addClass('show-embed');
-							setTimeout(player.play.bind(player), 500);
+							setTimeout(player.play.bind(player), PLAYER_SHOW_DURATION);
 						});
 						nextVideo();
 					}, function() {

@@ -1,3 +1,6 @@
+.uppercase {
+  text-transform: uppercase; }
+
 header > a, .menu-main-menu-container .open a, footer .info li.col-2 span a, footer .info li.col-3 span {
   display: block;
   text-indent: -9999px;
@@ -75,7 +78,9 @@ footer .hr-logo {
     margin: 0 auto;
     display: block;
     position: relative;
-    top: -20px; }
+    top: -20px;
+    cursor: default;
+    pointer-events: none; }
 
 footer .hr {
   border-bottom: 1px solid #625d59; }
@@ -329,7 +334,7 @@ header {
 
 footer {
   width: 100%;
-  font-family: Georgia, Times, "Times New Roman", serif; }
+  font-family: DINWEB, serif; }
   footer .hr,
   footer .info,
   footer .hr-logo {
@@ -368,7 +373,9 @@ footer {
       footer .info li.col-3 input[type=email] {
         border: 1px solid #ccc;
         padding: 7px;
-        width: 40%; }
+        width: 40%;
+        line-height: 13px;
+        font-size: 11px; }
       footer .info li.col-3 input[type=submit] {
         background-color: #54504c;
         color: #fff;
@@ -444,16 +451,20 @@ article {
     article {
       width: 90%; } }
 
+/* Wide pages */
+body.home > section > article,
 body.page-template-tmp-sidebar > section > article {
   max-width: 840px; }
-  @media (min-width: 540px) {
-    body.page-template-tmp-sidebar > section > article .content > main {
-      display: inline-block;
-      width: calc(100% - 310px);
-      min-width: 240px; } }
-  @media (min-width: 800px) {
-    body.page-template-tmp-sidebar > section > article .content > main {
-      width: calc(100% - 340px); } }
+
+@media (min-width: 540px) {
+  body.page-template-tmp-sidebar > section > article .content > main {
+    display: inline-block;
+    width: calc(100% - 310px);
+    min-width: 240px; } }
+
+@media (min-width: 800px) {
+  body.page-template-tmp-sidebar > section > article .content > main {
+    width: calc(100% - 340px); } }
 
 .btn {
   color: white;

@@ -1,15 +1,18 @@
-@import "app/base/core";
+@import "app/base/variables";
+@import "app/base/fonts";
+@import "app/base/breakpoints";
+@import "app/widgets/image-replace";
+@import "app/widgets/inline-block";
+@import "app/widgets/sprites";
+@import "app/widgets/hr";
+@import "app/widgets/slideshow";
 
 article {
-
 	font-family: $georgia;
-
 }
 
 .slideshow {
-
 	@extend %slideshow;
-
 }
 
 .intro {
@@ -18,6 +21,10 @@ article {
 	line-height: 29px;
 	text-align: center;
 	padding: 25px 0 40px;
+
+	p {
+		font-size: inherit !important;
+	}
 
 	strong {
 
@@ -179,4 +186,123 @@ article {
 
 	}
 
+}
+
+body.home .video {
+	width: 1020px;
+	margin: 0 auto;
+	display: block;
+	margin: 0 auto;
+	@media (max-width: 850px) {
+		overflow: hidden;
+		padding-bottom: 56.25%;
+		position: relative;
+		height: 0;
+		iframe{
+			left: 0;
+			top: 0;
+			height: 100%;
+			width: 100%;
+			position: absolute;
+		}
+	}
+}
+body.home .video-embed {
+	margin-bottom: 60px;
+	text-align: center;
+	img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: auto;
+		z-index: 2;
+	}
+	iframe {
+		position: relative;
+		max-width: 100%;
+		visibility: hidden;
+		opacity: 0;
+		z-index: 5;
+		transition: opacity 0.5s;
+	}
+	h3 {
+		font-size: 0.9em;
+		margin-bottom: 1em;
+		letter-spacing: 4px;
+		font-weight: bold;
+		span {
+			display: block;
+			height: 0;
+			visibility: hidden;
+		}
+	}
+	.video-container {
+		display: inline-block;
+		position: relative;
+		cursor: pointer;
+	}
+	.play-icon {
+		position: absolute;
+		top: 50px;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		margin: auto;
+		z-index: 3;
+		width: 80px;
+		height: 80px;
+		opacity: 1;
+		transition: opacity 0.2s;
+		pointer-events: none;
+		.circle, .triangle {
+			stroke: white;
+			fill: white;
+		}
+		.circle {
+			fill: none;
+			stroke-width: 5px;
+		}
+		.triangle {
+			transform-origin: center;
+		}
+	}
+	.video-container:hover + .play-icon {
+		opacity: 1;
+	}
+	.video-embed.show-embed {
+		.play-icon, img {
+			opacity: 0;
+		}
+		iframe {
+			visibility: visible;
+			opacity: 1;
+		}
+	}
+	@media (max-width: 804px) {
+		iframe {
+			height: calc((100vw - 54px) * 0.5625);
+		}
+	}
+	@media (min-width: 420px) {
+		h3 {
+			font-size: 1.3em;
+		}
+		.play-icon {
+			top: 64px;
+		}
+	}
+	@media (min-width: 664px) {
+		h3 {
+			font-size: 1.3em;
+			span {
+				display: inline;
+				height: auto;
+				visibility: visible;
+			}
+		}
+		.play-icon {
+			top: 40px;
+		}
+	}
 }
