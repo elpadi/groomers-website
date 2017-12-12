@@ -928,3 +928,7 @@ function custom_taxonomies_menus() {
 	register_taxonomy( 'menus_category', 'menus', $args );
 }
 add_action( 'init', 'custom_taxonomies_menus', 0 );
+
+function galbert_menus_query() {
+	return new WP_Query('post_type=menus&order=ASC&orderby=menu_order');
+}
