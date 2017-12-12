@@ -47,6 +47,7 @@ input {
 textarea,
 input[type="text"],
 input[type="number"],
+input[type="tel"],
 input[type="email"] {
 	border: 1px solid $white-02;
 	line-height: 25px;
@@ -58,9 +59,9 @@ select {
 
 div.wpcf7-response-output {
 	padding: 1em;
-	margin: 2em 0 3em;
+	margin: 2em 0 0;
 	border-width: 1px;
 }
-div.wpcf7-mail-sent-ok {
-	background-color: $green-01;
-}
+div.wpcf7-mail-sent-ok { background-color: $green-01; }
+div.wpcf7-mail-sent-ng { background-color: $red-01; }
+div.wpcf7-validation-errors { background-color: $yellow-01; }
