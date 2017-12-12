@@ -55,3 +55,12 @@ input[type="email"] {
 select {
 	padding: 5px 3px;
 }
+
+div.wpcf7-response-output {
+	padding: 1em;
+	margin: 2em 0 3em;
+	border-width: 1px;
+}
+div.wpcf7-mail-sent-ok {
+	background-color: $green-01;
+}
