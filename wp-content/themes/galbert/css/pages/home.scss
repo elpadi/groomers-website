@@ -270,7 +270,7 @@ body.home .video-embed {
 	.video-container:hover + .play-icon {
 		opacity: 1;
 	}
-	.video-embed.show-embed {
+	&.show-embed {
 		.play-icon, img {
 			opacity: 0;
 		}

@@ -251,9 +251,9 @@ body.home .video-embed {
       transform-origin: center; }
   body.home .video-embed .video-container:hover + .play-icon {
     opacity: 1; }
-  body.home .video-embed .video-embed.show-embed .play-icon, body.home .video-embed .video-embed.show-embed img {
+  body.home .video-embed.show-embed .play-icon, body.home .video-embed.show-embed img {
     opacity: 0; }
-  body.home .video-embed .video-embed.show-embed iframe {
+  body.home .video-embed.show-embed iframe {
     visibility: visible;
     opacity: 1; }
   @media (max-width: 804px) {
